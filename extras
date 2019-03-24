@@ -1,0 +1,635 @@
+<div class="form">
+  <div class="form-group">
+    <!-- CARD COMPS -->
+    <div class="card">
+          <h4 class="card-header  display-4" style="text-align: center; font-size: 45px;">Computer Engineering</h4>
+          <div class="card-body">
+
+            <!-- Collaplsible -->
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseCompsOne" aria-expanded="true" aria-controls="collapseOne">
+                      Second Year
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseCompsOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3>Enter subjects for second year</h3>
+                    <table class="table" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_1">1</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_2">2</label> -->
+                              <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_3">3</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_4">4</label> -->
+                              <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_5">5</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_6">6</label> -->
+                              <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <input type="button" name="" value="Submit" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseCompsTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Third Year
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseCompsTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3>Enter subjects for third year</h3>
+                    <table class="table" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_1">1</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_2">2</label> -->
+                              <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_3">3</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_4">4</label> -->
+                              <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_5">5</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_6">6</label> -->
+                              <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <input type="button" name="" value="Submit" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseCompsThree" aria-expanded="false" aria-controls="collapseThree">
+                          Fourth Year
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseCompsThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <h3>Enter subjects for final year</h3>
+                        <table class="table" border="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_1">1</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_2">2</label> -->
+                                  <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_3">3</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_4">4</label> -->
+                                  <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_5">5</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_6">6</label> -->
+                                  <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <input type="button" name="" value="Submit" class="btn btn-primary">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+  </div>
+</div>
+
+<div class="form">
+  <div class="form-group">
+    <!-- CARD ETRX -->
+    <div class="card">
+          <h4 class="card-header  display-4" style="text-align: center; font-size: 45px;">Electronics Engineering</h4>
+          <div class="card-body">
+
+            <!-- Collaplsible -->
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseETRXOne" aria-expanded="true" aria-controls="collapseOne">
+                      Second Year
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseETRXOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3>Enter subjects for second year</h3>
+                    <table class="table" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_1">1</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_2">2</label> -->
+                              <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_3">3</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_4">4</label> -->
+                              <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_5">5</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_6">6</label> -->
+                              <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <input type="button" name="" value="Submit" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseETRXTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Third Year
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseETRXTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3>Enter subjects for third year</h3>
+                    <table class="table" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_1">1</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_2">2</label> -->
+                              <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_3">3</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_4">4</label> -->
+                              <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_5">5</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_6">6</label> -->
+                              <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <input type="button" name="" value="Submit" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseETRXThree" aria-expanded="false" aria-controls="collapseThree">
+                          Fourth Year
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseETRXThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>Enter subjects for final year</p>
+                        <table class="table" border="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_1">1</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_2">2</label> -->
+                                  <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_3">3</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_4">4</label> -->
+                                  <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_5">5</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_6">6</label> -->
+                                  <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <input type="button" name="" value="Submit" class="btn btn-primary">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+  </div>
+</div>
+
+<div class="form">
+  <div class="form-group">
+    <!-- CARD EXTC -->
+    <div class="card">
+          <h4 class="card-header  display-4" style="text-align: center; font-size: 45px;">Electronics & Telecommunications</h4>
+          <div class="card-body">
+
+            <!-- Collaplsible -->
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEXTCOne" aria-expanded="true" aria-controls="collapseOne">
+                      Second Year
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseEXTCOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3>Second year list</h3>
+                    <table class="table" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_1">1</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_2">2</label> -->
+                              <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_3">3</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_4">4</label> -->
+                              <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_5">5</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_6">6</label> -->
+                              <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <input type="button" name="" value="Submit" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEXTCTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Third Year
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseEXTCTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <h3>Enter the subjects for third year</h3>
+                    <table class="table" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_1">1</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_2">2</label> -->
+                              <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_3">3</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_4">4</label> -->
+                              <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <div class="form-group">
+                                <!-- <label for="subject_5">5</label> -->
+                                <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="form-group">
+                              <!-- <label for="subject_6">6</label> -->
+                              <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <input type="button" name="" value="Submit" class="btn btn-primary">
+                  </div>
+                </div>
+              </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEXTCThree" aria-expanded="false" aria-controls="collapseThree">
+                          Fourth Year
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseEXTCThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>Enter subjects for final year</p>
+                        <table class="table" border="0">
+                          <tbody>
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_1">1</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_1" placeholder="first subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_2">2</label> -->
+                                  <input type="text" class="form-control" name="subject_2" placeholder="second subject" required>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_3">3</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_3" placeholder="third subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_4">4</label> -->
+                                  <input type="text" class="form-control" name="subject_4" placeholder="fourth subject" required>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <div class="form-group">
+                                    <!-- <label for="subject_5">5</label> -->
+                                    <input type="text" class="form-control fieldWidth" name="subject_5" placeholder="fifth subject" required>
+                                  </div>
+                              </td>
+                              <td>
+                                <div class="form-group">
+                                  <!-- <label for="subject_6">6</label> -->
+                                  <input type="text" class="form-control" name="subject_6" placeholder="sixth subject" required>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <input type="button" name="" value="Submit" class="btn btn-primary">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+  </div>
+</div>
+
+
+
+<td>
+    <div class="form-group">
+      <!-- <label for="subject_1">1</label> -->
+      <input type="text" class="form-control fieldWidth" name="itSESubject1" placeholder="first subject" required>
+    </div>
+</td>
+<td>
+  <div class="form-group">
+    <!-- <label for="subject_2">2</label> -->
+    <input type="text" class="form-control" name="itSESubject2" placeholder="second subject" required>
+  </div>
+</td>

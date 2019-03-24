@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script type="text/javascript">
+    function addRow (){
+      document.querySelector('#content').insertAdjacentHTML(
+        'afterbegin',
+        `<div class="row">
+          <input type="text" name="name" value="" />
+          <input type="button" value="-" onclick="removeRow(this)">
+        </div>`
+     )
+      }
+      function removeRow (input) {
+      input.parentNode.remove()
+      }
+  </script>
+  <body>
+    <input type="button" value="+" onclick="addRow()">
+    <div id="content">
+</div>
+  </body>
+</html>
