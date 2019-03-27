@@ -1,5 +1,6 @@
 <?php
 
+// echo "<script>window.alert(subjectCountSEIT);</script>"
 
 ?>
 
@@ -12,11 +13,67 @@
     <title>Subjects List</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="../js/subjectadder.js"></script>
+    <script type="text/javascript" src="../subjects/js/subjectadder.js"></script>
+
+    <script type="text/javascript">
+
+    // function sendData(){
+    //   var subjectCountSEIT = document.getElementsByClassName("subjectSEIT").length;
+    //   // window.alert("Subject for SEIT: " + subjectCountSEIT);
+    //   window.location.href = "../subjects/php/insertSEITData.php?subjectCountSEIT=" + subjectCountSEIT;
+    //
+    // }
+    // window.alert(subjectSEIT);
+      // function sendData(){
+      //   var str = $(".serialForm").serializeArray();
+      //   $.ajax({
+      //     type: 'post',
+      //     url: '../subjects/php/insertSEITdata.php',
+      //     data: str,
+      //     dataType: 'json',
+      //     success: function (html) {
+      //       window.alert("Success");
+      //      // $('#success__para').html("You data will be saved");
+      //     }
+      //    }
+      //    window.alert("Alert");
+      //
+      //  );
+      //    return false;
+      // }
+
+
+    // $(document).ready(function(){
+    //   $(".serial").click(function(){
+    //     $(".serialOutput").text($(".serialForm").serialize());
+    //   });
+    //   });
+
+    // $(document).ready(function() {
+    //   $("#submitSEITButton").click(function() {
+    //     $.post("insertSEITData.php", {}, function(data) {
+    //   alert(data);
+    //   $('#form')[0].reset(); // To reset form fields
+    //   });
+    //   }
+    //   });
+    //   });
+
+    //   $(document).ready(function() {
+    //     $("#submitSEITButton").click(function() {
+    //       $.post( "../subject/php/insertSEITData.php", { name: "John"}, function(data){
+    //         console.log(data);
+    //       });
+    //     }
+    //   );
+    // });
+      // $.post( "test.php", $( "#testform" ).serialize() );
+    </script>
+
     <style media="screen">
     .btn-link {
       text-decoration: none!important;
@@ -79,7 +136,7 @@
                             <label class="mr-2" for="courseOutcome"><h4>Enter SE subjects: </h4></label>
                               <input type="button" class="add-subject-se btn btn-primary btn-sm mb-1" value="+">
                           </form>
-                          <form class="" action="" method="post">
+                          <form id="serialForm" method="post">
                             <div>
                               <table id='seittable' class="table table-bordered" border="0">
                                 <thead>
@@ -94,7 +151,10 @@
                                 </tbody>
                               </table>
                             </div>
-                            <input type="submit" name="submitSEIT" value="Submit" class="btn btn-primary">
+                            <!-- <input type="submit" name="submitSEIT" value="Submit" class="btn btn-primary" onclick="sendData()" > -->
+                            <!-- <input type="submit" name="submitSEIT" value="Submit" class="btn btn-primary serial"> -->
+                            <input type="submit" id="submitSEITButton" name="submitSEIT" value="Submit" class="btn btn-primary">
+
                           </form>
                         </div>
                       </div>
@@ -116,7 +176,7 @@
                               <label class="mr-2" for="courseOutcome"><h4>Enter TE subjects: </h4></label>
                                 <input type="button" class="add-subject-te btn btn-primary mb-1" value="+">
                             </form>
-                            <form class="" action="" method="post">
+                            <form id="serialForm" action="" method="post">
                               <div>
                                 <table id='teittable' class="table table-bordered" border="0">
                                   <thead>
@@ -131,7 +191,8 @@
                                   </tbody>
                                 </table>
                               </div>
-                              <input type="submit" name="submitTEIT" value="Submit" class="btn btn-primary">
+                              <!-- <input type="submit" id="submitSEITButton" name="submitSEIT" value="Submit" class="btn btn-primary"> -->
+                              <input type="submit" id="submitTEITButton" name="submitTEIT" value="Submit" class="btn btn-primary">
                             </form>
                         </div>
                         </div>
@@ -154,7 +215,7 @@
                               <label class="mr-2" for="courseOutcome"><h4>Enter BE subjects: </h4></label>
                                 <input type="button" class="add-subject-be btn btn-primary mb-1" value="+">
                             </form>
-                            <form class="" action="" method="post">
+                            <form id="serialForm" action="" method="post">
                               <div>
                                 <table id='beittable' class="table table-bordered" border="0">
                                   <thead>
@@ -169,7 +230,7 @@
                                   </tbody>
                                 </table>
                               </div>
-                              <input type="submit" name="submitBEIT" value="Submit" class="btn btn-primary">
+                              <input type="submit" id="submitBEITButton" name="submitBEIT" value="Submit" class="btn btn-primary">
                             </form>
                           </div>
                         </div>
@@ -179,13 +240,49 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       <!-- </div> -->
     </div>
+    <div class="serialOutput">
+    </div>
 
 
 
+<script type="text/javascript">
+  $(document).ready(function() {
 
+    $("#submitSEITButton").click(function(event) {
+      event.preventDefault();
+      // console.log("Click");
+      $.post( "../subjects/php/insertSEITData.php", $("#serialForm").serialize(), function(data){
+      // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
+        console.log(data);
+      });
+    }
+  );
+
+    $("#submitTEITButton").click(function(event) {
+      event.preventDefault();
+      // console.log("Click");
+      $.post( "../subjects/php/insertTEITData.php", $("#serialForm").serialize(), function(data){
+      // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
+        console.log(data);
+      });
+    }
+  );
+
+    $("#submitBEITButton").click(function(event) {
+      event.preventDefault();
+      // console.log("Click");
+      $.post( "../subjects/php/insertBEITData.php", $("#serialForm").serialize(), function(data){
+      // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
+        console.log(data);
+      });
+    }
+    );
+  });
+</script>
   </body>
 </html>

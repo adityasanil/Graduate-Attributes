@@ -8,5 +8,5 @@ $connect = mysqli_connect($host, $uname, $password, $dbname);
 if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
-// echo "Connected";
+// echo "Connected to portalDB";
 ?>
