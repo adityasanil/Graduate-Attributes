@@ -20,58 +20,7 @@
     <script type="text/javascript" src="../subjects/js/subjectadder.js"></script>
 
     <script type="text/javascript">
-
-    // function sendData(){
-    //   var subjectCountSEIT = document.getElementsByClassName("subjectSEIT").length;
-    //   // window.alert("Subject for SEIT: " + subjectCountSEIT);
-    //   window.location.href = "../subjects/php/insertSEITData.php?subjectCountSEIT=" + subjectCountSEIT;
-    //
-    // }
-    // window.alert(subjectSEIT);
-      // function sendData(){
-      //   var str = $(".serialForm").serializeArray();
-      //   $.ajax({
-      //     type: 'post',
-      //     url: '../subjects/php/insertSEITdata.php',
-      //     data: str,
-      //     dataType: 'json',
-      //     success: function (html) {
-      //       window.alert("Success");
-      //      // $('#success__para').html("You data will be saved");
-      //     }
-      //    }
-      //    window.alert("Alert");
-      //
-      //  );
-      //    return false;
-      // }
-
-
-    // $(document).ready(function(){
-    //   $(".serial").click(function(){
-    //     $(".serialOutput").text($(".serialForm").serialize());
-    //   });
-    //   });
-
-    // $(document).ready(function() {
-    //   $("#submitSEITButton").click(function() {
-    //     $.post("insertSEITData.php", {}, function(data) {
-    //   alert(data);
-    //   $('#form')[0].reset(); // To reset form fields
-    //   });
-    //   }
-    //   });
-    //   });
-
-    //   $(document).ready(function() {
-    //     $("#submitSEITButton").click(function() {
-    //       $.post( "../subject/php/insertSEITData.php", { name: "John"}, function(data){
-    //         console.log(data);
-    //       });
-    //     }
-    //   );
-    // });
-      // $.post( "test.php", $( "#testform" ).serialize() );
+    
     </script>
 
     <style media="screen">
@@ -136,7 +85,7 @@
                             <label class="mr-2" for="courseOutcome"><h4>Enter SE subjects: </h4></label>
                               <input type="button" class="add-subject-se btn btn-primary btn-sm mb-1" value="+">
                           </form>
-                          <form id="serialForm" method="post">
+                          <form id="serialFormSE" method="post">
                             <div>
                               <table id='seittable' class="table table-bordered" border="0">
                                 <thead>
@@ -176,7 +125,7 @@
                               <label class="mr-2" for="courseOutcome"><h4>Enter TE subjects: </h4></label>
                                 <input type="button" class="add-subject-te btn btn-primary mb-1" value="+">
                             </form>
-                            <form id="serialForm" action="" method="post">
+                            <form id="serialFormTE" action="" method="post">
                               <div>
                                 <table id='teittable' class="table table-bordered" border="0">
                                   <thead>
@@ -215,7 +164,7 @@
                               <label class="mr-2" for="courseOutcome"><h4>Enter BE subjects: </h4></label>
                                 <input type="button" class="add-subject-be btn btn-primary mb-1" value="+">
                             </form>
-                            <form id="serialForm" action="" method="post">
+                            <form id="serialFormBE" action="" method="post">
                               <div>
                                 <table id='beittable' class="table table-bordered" border="0">
                                   <thead>
@@ -253,30 +202,30 @@
 <script type="text/javascript">
   $(document).ready(function() {
 
-    $("#submitSEITButton").click(function(event) {
-      event.preventDefault();
+    $("#submitSEITButton").click(function() {
+      // event.preventDefault();
       // console.log("Click");
-      $.post( "../subjects/php/insertSEITData.php", $("#serialForm").serialize(), function(data){
+      $.post( "../subjects/php/insertSEITData.php", $("#serialFormSE").serialize(), function(data){
       // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
         console.log(data);
       });
     }
   );
 
-    $("#submitTEITButton").click(function(event) {
-      event.preventDefault();
+    $("#submitTEITButton").click(function() {
+      // event.preventDefault();
       // console.log("Click");
-      $.post( "../subjects/php/insertTEITData.php", $("#serialForm").serialize(), function(data){
+      $.post( "../subjects/php/insertTEITData.php", $("#serialFormTE").serialize(), function(data){
       // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
         console.log(data);
       });
     }
   );
 
-    $("#submitBEITButton").click(function(event) {
-      event.preventDefault();
+    $("#submitBEITButton").click(function() {
+      // event.preventDefault();
       // console.log("Click");
-      $.post( "../subjects/php/insertBEITData.php", $("#serialForm").serialize(), function(data){
+      $.post( "../subjects/php/insertBEITData.php", $("#serialFormBE").serialize(), function(data){
       // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
         console.log(data);
       });
