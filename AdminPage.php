@@ -58,7 +58,7 @@ $row = mysqli_fetch_array($query);
               </ul>
 
               <ul class="nav nav-pills">
-                  <li role="presentation"><a href="adminLinks/addSubjects.php" style="font-size: 26px;" target="_blank">Add subjects</a></li>
+                  <li role="presentation"><a href="adminLinks/addSubjects.php" style="font-size: 26px;" target="">Add subjects</a></li>
               </ul>
 
               <ul class="nav nav-pills">

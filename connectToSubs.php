@@ -8,5 +8,5 @@ $connectsubs = mysqli_connect($host, $uname, $password, $dbnamesubs);
 if (!$connectsubs) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected to SubsDB";
+// echo "Connected to SubsDB";
 ?>

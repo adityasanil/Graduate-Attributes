@@ -1,10 +1,3 @@
-<?php
-
-// echo "<script>window.alert(subjectCountSEIT);</script>"
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,7 +13,7 @@
     <script type="text/javascript" src="../subjects/js/subjectadder.js"></script>
 
     <script type="text/javascript">
-    
+
     </script>
 
     <style media="screen">
@@ -100,8 +93,6 @@
                                 </tbody>
                               </table>
                             </div>
-                            <!-- <input type="submit" name="submitSEIT" value="Submit" class="btn btn-primary" onclick="sendData()" > -->
-                            <!-- <input type="submit" name="submitSEIT" value="Submit" class="btn btn-primary serial"> -->
                             <input type="submit" id="submitSEITButton" name="submitSEIT" value="Submit" class="btn btn-primary">
 
                           </form>
@@ -140,7 +131,6 @@
                                   </tbody>
                                 </table>
                               </div>
-                              <!-- <input type="submit" id="submitSEITButton" name="submitSEIT" value="Submit" class="btn btn-primary"> -->
                               <input type="submit" id="submitTEITButton" name="submitTEIT" value="Submit" class="btn btn-primary">
                             </form>
                         </div>
@@ -199,7 +189,7 @@
 
 
 
-<script type="text/javascript">
+  <script type="text/javascript">
   $(document).ready(function() {
 
     $("#submitSEITButton").click(function() {
@@ -232,6 +222,6 @@
     }
     );
   });
-</script>
+  </script>
   </body>
 </html>

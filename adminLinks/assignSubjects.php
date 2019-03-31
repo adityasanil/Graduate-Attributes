@@ -13,10 +13,6 @@
     .btn-link {
       text-decoration: none!important;
     }
-    .card {
-      /* border: 0 !important; */
-      /* border: none; */
-    }
     .inline-block-child {
       display: inline-block;
     }
@@ -28,6 +24,52 @@
      }
 
     </style>
+
+    <script type="text/javascript">
+    function loadSubjects() {
+      var xhttp;
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("display").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "../subjects/php/retrieveSubjectsSEIT.php?", true);
+      xhttp.send();
+    }
+
+    $(document).ready(function() {
+
+      $("#submitSEITSPM").click(function(event) {
+        event.preventDefault();
+        // console.log("Click");
+        $.post("../subjectProfData/insertSPM.php", $("#spmseit").serialize(), function(data){
+          console.log(data);
+        });
+      }
+    );
+
+    //   $("#submitTEITButton").click(function() {
+    //     // event.preventDefault();
+    //     // console.log("Click");
+    //     $.post( "../subjects/php/insertTEITData.php", $("#serialFormTE").serialize(), function(data){
+    //     // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
+    //       console.log(data);
+    //     });
+    //   }
+    // );
+    //
+    //   $("#submitBEITButton").click(function() {
+    //     // event.preventDefault();
+    //     // console.log("Click");
+    //     $.post( "../subjects/php/insertBEITData.php", $("#serialFormBE").serialize(), function(data){
+    //     // $.post( "../subjects/php/insertSEITData.php", {name: "John"}, function(data){
+    //       console.log(data);
+    //     });
+    //   }
+    //   );
+    });
+    </script>
 
   </head>
   <body>
@@ -74,21 +116,31 @@
 
               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <p>
-                      <button class="btn btn-primary btn-sm btn-width" data-toggle="collapse" href="#collapseSEIT" type="button" aria-expanded="false" aria-controls="collapseSEIT">
-                        SE-IT
-                      </button>
-                      <button class="btn btn-primary btn-sm btn-width" data-toggle="collapse" href="#collapseTEIT" type="button" aria-expanded="false" aria-controls="collapseTEIT">
-                        TE-IT
-                      </button>
-                      <button class="btn btn-primary btn-sm btn-width" data-toggle="collapse" href="#collapseBEIT" type="button" aria-expanded="false" aria-controls="collapseBEIT">
-                        BE-IT
-                      </button>
-                    </p>
+                  <p>
+                    <button class="btn btn-primary btn-sm col-sm-6 btn-width" data-toggle="collapse" href="#collapseSEIT" type="button" aria-expanded="false" aria-controls="collapseSEIT" onclick="loadSubjects()">
+                      SE-IT
+                    </button>
+                    <button class="btn btn-primary btn-sm col-sm-6 btn-width" data-toggle="collapse" href="#collapseTEIT" type="button" aria-expanded="false" aria-controls="collapseTEIT">
+                      TE-IT
+                    </button>
+                    <button class="btn btn-primary btn-sm col-sm-6 btn-width" data-toggle="collapse" href="#collapseBEIT" type="button" aria-expanded="false" aria-controls="collapseBEIT">
+                      BE-IT
+                    </button>
+                  </p>
 
                     <div class="collapse" id="collapseSEIT">
                       <div class="card card-body">
-                        <p>Code: SEIT</p>
+                        <h5>Subjects for SEIT</h5>
+                        <!-- <form id="spmseit" action="../subjectProfData/insertSPM.php" method="post"> -->
+                        <form id="spmseit" action="" method="">
+
+                          <div id="display">Subjects will be listed here...</div>
+
+                          <div class="form-group">
+                            <input type="submit" id="submitSEITSPM" class="btn btn-primary" name="" value="Submit">
+                          </div>
+                        </form>
+
                       </div>
                     </div>
                     <p></p>
@@ -116,6 +168,5 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>
