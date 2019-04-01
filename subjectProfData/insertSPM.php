@@ -22,11 +22,13 @@ for ($j=0; $j < count($arrayValues) ; $j = $j + 2) {
 
   $insertSubject = $arraySubjects[$j];
   $insertProfessor = $arrayProfessor[$j];
+  $nameArray = explode(" ", $insertProfessor);
+  $professorUsername = strtolower($nameArray[0] . "." . $nameArray[1]);
 
   // echo "Subject:". $insertSubject;
   // echo "  Professor: ". $insertProfessor;
 
-  $sqlInsert = "INSERT INTO SEITSPM (Subjects, Professors) VALUES ('$insertSubject', '$insertProfessor')";
+  $sqlInsert = "INSERT INTO SEITSPM (Subjects, Professors) VALUES ('$insertSubject', '$professorUsername')";
   $queryInsert = mysqli_query($connectsubs, $sqlInsert);
 
   // if(mysqli_query($connectsubs, $sqlInsert))

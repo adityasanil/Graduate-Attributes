@@ -1,15 +1,17 @@
 <?php
-//if(!isset($_SESSION['sessionentery']))
-//{
-//    header("Location: logout.php");
-//}
+
 include "connection.php";
+include "connectToSubs.php";
 
 session_start();
 $user_session = $_SESSION['sessionentery'];
 $sql = "SELECT * FROM ProfessorTable WHERE Username = '$user_session'";
 $query = mysqli_query($connect, $sql);
 $row = mysqli_fetch_array($query);
+
+$sqlSubject = "SELECT * FROM SEITSPM WHERE Professors = '$user_session'";
+$querySubject = mysqli_query($connectsubs, $sqlSubject);
+$rowSubject = mysqli_fetch_array($querySubject);
 
 ?>
 
@@ -102,7 +104,8 @@ $row = mysqli_fetch_array($query);
             <div class="collapse multi-collapse" id="multiCollapseExample1">
               <div class="card card-body">
                 <p>Subject assigned to you for Third year</p>
-                <a href="subjects/subjectMappingPage.php" target="_blank">Subject 1</a>
+                <p>Assigned: <a href="subjects/subjectMappingPage.php" target=""><?php echo $rowSubject['Subjects']; ?></a></p>
+
               </div>
             </div>
           </div>
@@ -110,7 +113,7 @@ $row = mysqli_fetch_array($query);
             <div class="collapse multi-collapse" id="multiCollapseExample2">
               <div class="card card-body">
                 <p>Subject assigned to you for Third year</p>
-                <a href="subjects/subjectMappingPage.php" target="_blank">Subject 2</a>
+                <p>Assigned: <a href="subjects/subjectMappingPage.php" target=""><?php echo $rowSubject['Subjects']; ?></a></p>
               </div>
             </div>
           </div>
@@ -118,7 +121,7 @@ $row = mysqli_fetch_array($query);
             <div class="collapse multi-collapse" id="multiCollapseExample3">
               <div class="card card-body">
                 <p>Subject assigned to you for Final year</p>
-                <a href="subjects/subjectMappingPage.php" target="_blank">Subject 3</a>
+                <p>Assigned: <a href="subjects/subjectMappingPage.php" target=""><?php echo $rowSubject['Subjects']; ?></a></p>
               </div>
             </div>
           </div>

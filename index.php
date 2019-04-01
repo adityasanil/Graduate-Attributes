@@ -2,6 +2,7 @@
 include "connection.php";
 // include "css/bar.php";
 
+
 function test_input($data)
 {
     $data = trim($data);

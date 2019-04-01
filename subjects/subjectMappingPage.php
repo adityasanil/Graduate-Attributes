@@ -1,3 +1,20 @@
+<?php
+include "../connection.php";
+include "../connectToSubs.php";
+
+
+session_start();
+$user_session = $_SESSION['sessionentery'];
+
+$sqlSubjectMap = "SELECT * FROM SEITSPM WHERE Professors = '$user_session'";
+$querySubjectMap = mysqli_query($connectsubs, $sqlSubjectMap);
+$rowSubjectMap = mysqli_fetch_array($querySubjectMap);
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -88,7 +105,7 @@
           </li>
         </ul>
         <form class="form-inline">
-          <a class="btn btn-outline-light" href="index.php" role="button">Logout</a>
+          <a class="btn btn-outline-light" href="../index.php" role="button">Logout</a>
         </form>
       </div>
     </nav>
@@ -103,9 +120,9 @@
         <!-- <h1>Subject mapping page</h1> -->
         <form>
           <div class="form-group">
-            <p class="lead">Subject: php["Subject_1"]</p>
-            <p class="lead">Year: php["Year"]</ </p>
-            <p class="lead">Incharge name: php["Professor Names"]</p>
+            <p class="lead">Subject: <?php echo $rowSubjectMap['Subjects']; ?></p>
+            <p class="lead">Year: 2018-2019</ </p>
+            <p class="lead">Professor Incharge: <?php echo $rowSubjectMap['Professors']; ?></p>
             <hr style="height: 0.4px; color: #333; background-color: #333;">
           </div>
           </form>

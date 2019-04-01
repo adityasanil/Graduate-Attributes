@@ -40,8 +40,8 @@
 
     $(document).ready(function() {
 
-      $("#submitSEITSPM").click(function(event) {
-        event.preventDefault();
+      $("#submitSEITSPM").click(function() {
+        // event.preventDefault();
         // console.log("Click");
         $.post("../subjectProfData/insertSPM.php", $("#spmseit").serialize(), function(data){
           console.log(data);
@@ -131,7 +131,6 @@
                     <div class="collapse" id="collapseSEIT">
                       <div class="card card-body">
                         <h5>Subjects for SEIT</h5>
-                        <!-- <form id="spmseit" action="../subjectProfData/insertSPM.php" method="post"> -->
                         <form id="spmseit" action="" method="">
 
                           <div id="display">Subjects will be listed here...</div>
