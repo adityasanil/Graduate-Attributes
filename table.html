@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <button type="button" name="button" class="btn btn-primary" id="mappingTableButton" onclick="addTable();">Table</button>
+    <br>
+    <div id="COPOTable"></div>
+
+
+    <script type="text/javascript">
+      var check = 0;
+      function addTable() {
+
+        if(check == 0){
+          var myTableDiv = document.getElementById("COPOTable");
+          var table = document.createElement('TABLE');
+          table.border = '1';
+          table.cellSpacing = '20';
+          table.cellPadding = '10';
+
+          table.setAttribute("id", "mappingTable")
+          // table.setAttribute("class", "table table-bordered table-sm");
+
+          var tableBody = document.createElement('TBODY');
+          table.appendChild(tableBody);
+
+
+          for (var k = 1; k <= 15; k++) {
+            var tr = document.createElement('TR');
+            tableBody.appendChild(tr);
+
+            for (var l = 1; l <= 15 ; l++) {
+              var td = document.createElement('TD');
+
+              if (k == 1 && l == 1) {
+                td.appendChild(document.createTextNode(" "));
+                tr.appendChild(td);
+              }
+              else if (k == 1 && l > 1) {
+                td.appendChild(document.createTextNode("CO " + (l - 1)));
+                tr.appendChild(td);
+              }
+              else if (k >= 2 && l == 1) {
+              td.appendChild(document.createTextNode("PO " + (k - 1)));
+              tr.appendChild(td);
+              }
+              else {
+                td.appendChild(document.createTextNode(" Cell "));
+                tr.appendChild(td);
+              }
+            }
+
+          }
+          myTableDiv.appendChild(table);
+          ++check;
+        }
+
+    }
+    </script>
+
+    <input type="checkbox" name="" value="">
+
+
+  </body>
+</html>
