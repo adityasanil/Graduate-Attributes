@@ -155,8 +155,7 @@ $rowSubjectMap = mysqli_fetch_array($querySubjectMap);
         </form>
       </div>
     </nav>
-
-    <br>
+    <!-- <br> -->
 
     <!-- Subject Information -->
     <div class="container">
@@ -166,9 +165,20 @@ $rowSubjectMap = mysqli_fetch_array($querySubjectMap);
         <!-- <h1>Subject mapping page</h1> -->
         <form>
           <div class="form-group">
-            <p class="lead">Subject: <?php echo $rowSubjectMap['Subjects']; ?></p>
-            <p class="lead">Year: 2018-2019</ </p>
-            <p class="lead">Professor Incharge: <?php echo $rowSubjectMap['Professors']; ?></p>
+            <table>
+              <tbody>
+                <tr>
+                  <td style="width: 94%;"><p class="lead">Subject: <?php echo $rowSubjectMap['Subjects']; ?></p></td>
+                  <td><a href="../records/marksheet.php" class="btn btn-warning" role="button" target="_blank">Marksheet</a></td>
+                </tr>
+                <tr>
+                  <td><p class="lead">Year: 2018-2019</ </p></td>
+                </tr>
+                <tr>
+                  <td><p class="lead">Professor Incharge: <?php echo $rowSubjectMap['Professors']; ?></p></td>
+                </tr>
+              </tbody>
+            </table>
             <hr style="height: 0.4px; color: #333; background-color: #333;">
           </div>
           </form>
