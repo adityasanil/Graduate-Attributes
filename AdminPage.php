@@ -65,9 +65,9 @@ $row = mysqli_fetch_array($query);
                   <li role="presentation"><a href="adminLinks/assignSubjects.php" style="font-size: 26px;">Assign subjects to Professor</a></li>
               </ul>
 
-              <ul class="nav nav-pills">
+              <!-- <ul class="nav nav-pills">
                   <li role="presentation"><a href="adminLinks/generateReports.php" style="font-size: 26px;">Generate reports</a></li>
-              </ul>
+              </ul> -->
 
 
           </form>

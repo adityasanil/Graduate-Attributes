@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+    </style>
+    <script type="text/javascript">
+    window.onload = function(){
+      var first = document.getElementById('first');
+      var second = document.getElementById('second');
+      var result = document.getElementById('result');
+
+      first.addEventListener("input", sum);
+      second.addEventListener("input", sum);
+
+      function sum() {
+
+       var one = parseFloat(first.value) || 0;
+      var two = parseFloat(second.value) || 0;
+
+      var add = one+two;
+
+      result.innerHTML = "Your Sum is : " + add;
+    }
+    }
+
+    </script>
+  </head>
+  <body>
+    <div class="container text-center">
+
+      <h1>
+        JavaScript Dynamic Addition
+      </h1>
+
+    <form action="#" class="form-inline">
+
+      <input type="text" id="first"class="form-control" placeholder="Enter your first number">
+        <input type="text" id="second" class="form-control" placeholder="Enter your second number">
+
+    </form>
+
+      <h2 id="result"></h2>
+
+    Pen By<a href="https://www.facebook.com/iamsrithanreddy">
+      Srithan Reddy
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      Follow Me on <a href="https://twitter.com/iamsrithan">
+      Twitter </a>
+
+    </div>
+  </body>
+</html>

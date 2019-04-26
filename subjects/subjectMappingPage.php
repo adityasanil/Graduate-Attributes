@@ -66,10 +66,6 @@ $rowSubjectMap = mysqli_fetch_array($querySubjectMap);
 
       });
 
-      // function counter(){
-        // window.alert("CO: " + countCO + "\n ");
-      // }
-
       function addTable() {
 
         var countCO = parseInt(document.getElementsByClassName('courseOutcome').length) + 1 ;
