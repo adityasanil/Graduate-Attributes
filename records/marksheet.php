@@ -41,6 +41,8 @@ $rowmap = mysqli_fetch_array($querymap);
 
     <script type="text/javascript">
 
+    var totalCOFinal = [];
+
     $(document).ready(function(){
       $("#SubmitCOtoEXP").click(function(event) {
         event.preventDefault();
@@ -270,29 +272,20 @@ $rowmap = mysqli_fetch_array($querymap);
       var averageo = o.toFixed(2);
       document.getElementById("average4").innerHTML = averageo;
 
-
-      var totalCO_1 = parseFloat((a + a2 + a3 + a4)/4);
-      var finalTotalCO1 = "<p id='totalCO_1final'>" + totalCO_1 + "</p>";
+      totalCOFinal[0] = parseFloat((a + a2 + a3 + a4)/4);
+      var finalTotalCO1 = "<p id='totalCO_1final'>" + totalCOFinal[0] + "</p>";
       document.getElementById("totalCO1").innerHTML = "Total: " + finalTotalCO1;
 
-      // document.getElementById("totalCO1").innerHTML = "<input type='text' readonly id='totalCO_1 value='" + totalCO_1 + "'";
-
-      var totalCO_2 = parseFloat((b + b2 + b3 + b4)/4);
-      var finalTotalCO2 = "<p id='totalCO_2final'>" + totalCO_2 + "</p>";
+      totalCOFinal[1] = parseFloat((b + b2 + b3 + b4)/4);
+      var finalTotalCO2 = "<p id='totalCO_2final'>" + totalCOFinal[1] + "</p>";
       document.getElementById("totalCO2").innerHTML = "Total: " + finalTotalCO2;
 
-      var totalCO_3 = parseFloat((c + c2 + c3 + c4)/4);
-      var finalTotalCO3 = "<p id='totalCO_3final'>" + totalCO_3 + "</p>";
+      totalCOFinal[2] = parseFloat((c + c2 + c3 + c4)/4);
+      var finalTotalCO3 = "<p id='totalCO_3final'>" + totalCOFinal[2] + "</p>";
       document.getElementById("totalCO3").innerHTML = "Total: " + finalTotalCO3;
-
     }
-    // console.log(parseInt(totalCO_3));
-
-    // var value1 = document.getElementById("totalCO3").value;
-    // console.log(value1);
 
     function graphCall(){
-
       var chart = new CanvasJS.Chart("chartContainer", {
     	animationEnabled: true,
     	theme: "light1", // "light1", "light2", "dark1", "dark2"
@@ -301,7 +294,6 @@ $rowmap = mysqli_fetch_array($querymap);
     	},
     	axisY: {
     		title: "CO achieved",
-    		// suffix: "%",
         maximum: 5,
     		includeZero: true
     	},
@@ -312,19 +304,15 @@ $rowmap = mysqli_fetch_array($querymap);
     		type: "column",
     		// yValueFormatString: "#,##0.0#\"%\"",
     		dataPoints: [
-    			{ label: "Experiment 1", y: 4 },
-    			{ label: "Experiment 2", y: 3.5 },
-    			{ label: "Experiment 3", y: 2.5 },
-
+    			{ label: "Experiment 1", y: totalCOFinal[0] },
+    			{ label: "Experiment 2", y: totalCOFinal[1] },
+    			{ label: "Experiment 3", y: totalCOFinal[2] },
     		]
     	}]
     });
     chart.render();
     }
-
     </script>
-
-
   </head>
 
   <body>
@@ -405,7 +393,6 @@ $rowmap = mysqli_fetch_array($querymap);
               </p>
             </form>
           </div>
-          <!-- <br> -->
 
           <div class="">
             <div class="collapse" id="collapseExample">
@@ -544,13 +531,9 @@ $rowmap = mysqli_fetch_array($querymap);
                                   <span aria-hidden="true">&times;</span>
                                 </button>
                               </div>
-                              <div id="chartContainer" style="height: 100%;">
+                              <div id="chartContainer">
 
                               </div>
-
-
-
-
                               <!-- <div class="modal-footer">
                                 <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
                               </div> -->
